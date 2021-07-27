@@ -1,0 +1,216 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+  background: #fff;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contenedor{
+  width: 100%;
+  max-width: 1000px;
+  border: 0px solid #fff;
+  margin: 3px auto;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(20, auto);
+  grid-template-areas: "logo pad pad pad pad pad shop"
+                        "menu menu menu menu menu menu menu"
+                        "slide slide slide slide slide slide slide"
+                        "platos platos platos platos platos platos platos"
+                        "salad salad salad salad salad salad salad"
+                        "pane pane pane pane pane pane pane"
+                        "pizza pizza pizza pizza pizza pizza pizza"
+                        "hamb hamb hamb hamb hamb hamb hamb";
+}
+
+.contenedor > div {
+  background: blue;
+  padding: 0px;
+  color: #fff;
+  /* box-shadow: 2px 2px 10px rgba(0,0,0,.25); */
+}
+
+.contenedor .logo{
+  background: #fff;
+  height: 150px;
+  grid-area: logo;
+}
+.contenedor .logo img{
+  width: 100%;
+}
+.contenedor .pad{
+  background: #ffffff;
+  height: 150px;
+  grid-area: pad;
+}
+.contenedor .pad img{
+  width: 100%;
+}
+.contenedor .shop{
+  background: #fff;
+  height: 150px;
+  grid-area: shop;
+}
+.contenedor .shop img{
+  width: 100%;
+}
+.contenedor .menu{
+  background: #000;
+  height: auto;
+  grid-area: menu;
+}
+/* ------------------------- */
+/* NAVBAR */
+/* ------------------------- */
+.menu {
+	background-color: #000;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	padding: 2px;
+	z-index: 999;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	font-family: 'Noto Serif', serif;
+	margin-bottom: 0px;
+}
+
+.menu a {
+	display: inline-block;
+	padding: 10px 30px;
+	font-size: 20px;
+	background-color: #000;
+	margin: 0 10px;
+	transition: .5s ease all;
+	color: var(--gray-light);
+	text-decoration: none;
+}
+
+.menu a:hover {
+	transform: translateY(18px);
+	background-color: #00AF88;
+}
+
+/* slider de la pagina  */
+.contenedor .slide{
+  background: #FFF;
+  height: auto;
+  grid-area: slide;
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+	color: #333333;
+
+}
+.contenedor .platos{
+  background: #fff;
+  height: auto;
+  padding-top: 0;
+  grid-area: platos;
+}
+.contenedor .platos img{
+  width: 100%;
+}
+#ALIMENTOS {
+	position:absolute;
+	width:265px;
+	height:40px;
+	z-index:1;
+	left: 371px;
+	top: 721px;
+	visibility: visible;
+}
+.titulo{
+  font-size: 30px;
+  color: #fff;
+}
+.contenedor .salad{
+  background: #fff;
+  grid-area: salad;
+  height: auto;
+  width: 100%;
+}
+
+  /* border: 25px solid #07676d; */
+  .caja_columna{
+    color: #000;
+    background:#fff;
+    position: relative;
+    text-align: center;
+    width: 30%;
+    height: 550px;
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .caja_columna .texto{
+    position:absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 30px;
+  }
+  .caja_columna .texto h2{
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+  .caja_columna .texto p{
+    font-size:18px;
+  }
+
+  .contenedor .pane{
+    background: #fff;
+    grid-area: pane;
+    height: auto;
+    width: 100%;
+  }
+  .contenedor .pizza{
+    background: #fff;
+    grid-area: pizza;
+    height: auto;
+    width: 100%;
+  }
+  .contenedor .hamb{
+    background: #fff;
+    grid-area: hamb;
+    height: auto;
+    width: 100%;
+  }
+
+
+.taller{
+font-size: 36px;
+color: #003300;
+}
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 300px) {
+	p {
+		font-size: 18px;
+	}
+
+	.contenido-header .texto {
+		font-size: 60px;
+	}
+
+	.menu a {
+		font-size: 10px;
+	}
+
+
+	.nosotros .titulo,
+	.productos .titulo {
+		font-size: 30px;
+	}
+
+}
